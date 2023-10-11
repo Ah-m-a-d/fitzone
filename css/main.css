@@ -1,0 +1,412 @@
+:root{
+    --red:#f40447;
+    --lite:#f404485e;
+    --grey:#aaa;
+    --blue:#080A19;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Abril Fatface', cursive;
+    font-family: serif;
+    box-sizing: border-box;
+    letter-spacing: 1.8px;
+}
+*{
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;  
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+}
+ul{
+    list-style: none;
+}
+.landing{
+    background-image: url(/img/banner_bg.png);
+    background-size: cover;
+    height: 100vb;
+}
+.container{
+    margin: 0 70px;     
+    padding: 0 15px;
+}
+.header .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 70px;
+    padding:0 15px;
+}
+.container .logo img{
+    height: 50px;
+}
+.container ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.container ul li a{
+    display: block;
+    text-decoration: none;
+    justify-content: flex-end;
+    padding: 0px 10px;
+    color: #fff;
+    padding: 5px 20px;
+    position: relative;
+    font-weight: 200;
+    font-size: 16px;
+}
+.container ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width:0;
+    height: 2px;
+    background-color: var(--red);
+    transition: .5s;
+}
+.container  ul li a:hover,
+.container ul li a:hover::before{
+    background-color:var(--lite);
+    width: 100%;
+    z-index: 3;
+}
+.container h4{
+    background-color:var(--red);
+    padding: 10px 35px;
+    border-radius: 18px;
+    color: #fff;
+    margin-left: 60px;
+    font-size:14px;
+}
+.landing .text{
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    color: #fff;
+    background-color: rgb(0 0 0 / 50%);
+    text-align: center ;
+}
+.landing .text h1{
+    font-size: 6rem;
+    margin: 1rem 0;
+}
+.landing .text h1 span{
+    color: var(--red);
+    text-transform: capitalize;
+    margin-left: -2px;
+}
+.landing .text p{
+    font-size: 18px;
+    margin-top: -12px 0 10px;;
+}
+.feature{
+    background-image: url(/img/about.png);
+    background-size: cover;
+}
+.title{
+    margin: 70px 0 40px;
+    text-align: center;
+}
+.title p:first-child{
+    color: var(--red);
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+.title h2{
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+.title p{
+    color: var(--grey);
+    font-size: 14px;
+    width: 590px;
+    margin: auto;
+}
+.feature .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 70px 0 10px;
+}
+.feature .container .box{
+    width: 400px;
+    margin-bottom: 40px;
+    padding: 4px;
+    position: relative;
+}
+.feature .container .box::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 50px;
+    border-radius: 6px 6px 40px 15px;
+    transition: .7s;
+}
+.feature>div.container .box:hover::before{
+    width: 100%;
+    height: 100%;
+    background-color: var(--lite);
+}   
+.feature .container .box i{
+    background-color: var(--red);
+    color: #fff;
+    padding: 25px 14px;
+    margin-bottom: 10px;
+    border-radius: 6px 6px 40px 15px;
+}
+.feature .container .box h3 {
+    margin: 25px 0;
+}
+.feature .container .box p {
+    color: var(--grey);
+    line-height: normal;
+    font-size: 13px;
+}
+.feature>div.container>div.img>img{
+    width: 348px;
+}
+.strong{
+    background-image: url(/img/excuses_bg.png);
+    background-size: cover;
+    margin-top: 50px;
+    padding: 85px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.strong .img {
+    width: 480px;
+    position: relative;
+    display: flex;
+}
+.strong .img img:last-child{
+    position: absolute;
+    top: 105px;
+    left: 300px;
+    width: 100%;
+    height: 400px;
+}
+.strong .img img:last-child::before{
+    content: "";
+    position: absolute;
+    top: 105px;
+    left: 300px;
+    width: 100%;
+    background-color: rgb(0 0 0 / 50%);
+}
+.strong .img img {
+    width: 100%;
+}
+.strong .info{
+    width: 480px;
+}
+.strong .info h3{
+    font-size: 42px;
+    margin-bottom: 35px;
+}
+.strong .info p {
+    font-size: 14px;
+    color: var(--grey);
+    line-height: normal;
+}
+.strong .info .in{
+    display: flex;
+    margin: 25px 0;
+}
+.strong .info .in i{
+    color: var(--grey);
+    margin-right: 5px;
+}
+.strong .info>p:last-child{
+    background-color: var(--red);
+    padding: 10px 35px;
+    border-radius: 18px;
+    color: #fff;
+    width: fit-content;
+}
+.courses .img{
+    display: flex;
+    margin: 50px 0 80px;
+}
+.courses .img img{
+    width: 480px;
+    height: 400px;
+}
+.testimonial .container{
+    margin-top: 60px;
+    background-image: url(/img/about.png);
+    background-size:cover ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.testimonial .container .img{
+    position: relative;
+    display: flex;
+}
+.testimonial .container .img img:last-child{
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    width: 360px;
+    height: 330px;
+}
+.testimonial .container .text{
+    width: 400px;
+}
+.testimonial .container .text h3{
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.testimonial .container .text .star{
+    display: flex;
+    justify-content: space-between;
+}
+.testimonial .container .text .star i:not(:last-child){
+    margin: 5px;
+    color: yellow;
+}
+.testimonial .container .text p{
+    margin-bottom: 20px;
+    color: var(--grey);
+    line-height: normal;
+    font-style: italic;
+}
+.testimonial .container .text span{
+    border-radius: 50%;
+    border: 1px solid #000;
+    margin: 20px;
+    padding: 0px 8px;
+}
+.testimonial .container .text span.active{
+    background-color: var(--red);
+}
+.bmi{
+    background-image:url(/img/calculate_bg.png) ;
+    background-size: cover;
+    margin-top: 50p
+}
+.bmi .container{
+    width: 500px;
+    padding-bottom: 50px;
+}
+.bmi .container h3{
+    color: #fff;
+    padding: 60px 0 30px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+.bmi .container p{
+    color: #fff;
+    margin-bottom: 70px;
+    font-size: 12px;
+}
+.bmi .container input[type="number"]{
+background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    outline: none;
+    width: 200px;
+    margin-right: 30px;
+    margin-bottom: 60px;
+}
+.bmi .container span{
+    color: #fff;
+    margin-left: 6px;
+}
+.bmi .container input[type="button"]{
+    background-color: var(--red);
+    padding: 10px 35px;
+    border-radius: 18px;
+    color: #fff;
+    font-size: 14px;
+}
+.team .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 65px;
+}
+.team .container .box h3{
+    margin-top: 30px;
+    text-align: center;
+}
+.team .container .box p {
+    margin-top: 10px;
+    text-align: center;
+}
+.start{
+    background-image: url(/img/excuses_bg.png);
+    background-size: cover;
+    padding: 20px 0 80px;
+    margin-top: 30px;
+}
+.start .email{
+    text-align: center;
+}
+.start .email input[type="email"]{
+    background-color: #fff;
+    padding: 10px 35px;
+    border-radius: 18px;
+    width: 400px;
+}
+.start .email input[type="submit"] {
+    background-color: var(--red);
+    padding: 10px 35px;
+    border-radius: 18px;
+    color: #fff;
+    font-size: 14px;
+}
+.footer{
+    background-color: var(--blue);
+    color: #fff;
+}
+.footer .container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+.footer .container div:not(:last-child){
+    width: 250px;
+}
+.footer .container div h3{
+    margin-bottom: 20px;
+}
+.footer .container div p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: normal;
+}
+.footer .container .foot{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    margin-top: 15px;
+    border-top: 1px solid #fff;
+    width: 100%;
+}
+.footer .container .foot .text{
+    width: fit-content;
+}
+.footer .container .foot span{
+    color: var(--red);
+}
+.footer .container .foot i{
+    padding: 8px;
+}
